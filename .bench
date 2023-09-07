@@ -1,0 +1,12 @@
+setEnvironmentVariable GRADLE_HOME ~/opt/gradle-8.2
+setEnvironmentVariable GRADLE_OPTS -Dorg.gradle.daemon=true
+setEnvironmentVariable IDEA ~/opt/idea/bin/idea.sh
+setEnvironmentVariable JAVA_HOME ~/opt/jdk-17
+
+appendEnvironmentVariable PATH : "$GRADLE_HOME/bin"
+appendEnvironmentVariable PATH : "$JAVA_HOME/bin"
+
+checkDirectory $GRADLE_HOME
+checkDirectory $JAVA_HOME
+
+checkFile $IDEA
